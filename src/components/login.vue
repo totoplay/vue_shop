@@ -68,12 +68,11 @@ export default {
       this.$refs.LoginFormRef.validate(async valid => {
         console.log(this.loginFormRules);
         if (!valid) {
-          returne;
+          return;
         }
         const { date: res } = await this.$http.post("login", this.loginForm);
-        if (res.meta.status !== 200) {
-          return this.$message.error("登陆失败" + res.meta.msg);
-        }
+        if (res.meta.status !== 200) return
+        this.$message.error("登陆失败" + res.meta.msg);
         this.$message.success("登录成功");
         console.log(res);
         window.sessionStorage.setItem("token", res.data.token);
