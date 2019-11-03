@@ -44,7 +44,7 @@ export default {
           {
             min: 3,
             max: 10,
-            message: "登录名长度在9到10个字符",
+            message: "登录名长度在3到10个字符",
             trigger: "blur"
           }
         ],
@@ -66,13 +66,11 @@ export default {
     },
     login() {
       this.$refs.LoginFormRef.validate(async valid => {
-        console.log(this.loginFormRules);
         if (!valid) {
           return;
         }
-        const { date: res } = await this.$http.post("login", this.loginForm);
-        if (res.meta.status !== 200) return
-        this.$message.error("登陆失败" + res.meta.msg);
+        const { data: res } = await this.$http.post("login", this.loginForm);
+        if (res.meta.status !== 200) return this.$message.error("登陆失败" + res.meta.msg);
         this.$message.success("登录成功");
         console.log(res);
         window.sessionStorage.setItem("token", res.data.token);
@@ -107,8 +105,8 @@ export default {
     box-shadow: 0 0 10px #ddd;
     position: absolute;
     left: 50%;
-    top:0;
-    transform: translate(-50%,-50%);
+    top: 0;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     img {
       width: 100%;
