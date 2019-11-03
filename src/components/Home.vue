@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< login
        <el-container class="home-container">
   <el-header>
@@ -79,6 +80,11 @@
 >>>>>>> master
 >>>>>>> login
 >>>>>>> local
+=======
+    <div>
+        <el-button type='info' @click='loginout'>退出</el-button>
+    </div>
+>>>>>>> master
 </template>
 
 <script>
@@ -93,6 +99,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< login
 =======
@@ -121,4 +128,7 @@ export default {
 =======
 >>>>>>> login
 >>>>>>> local
+=======
+
+>>>>>>> master
 </style>
