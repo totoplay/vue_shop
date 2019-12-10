@@ -4,7 +4,7 @@
   <el-header>
     <el-button type='info' @click='loginout'>退出</el-button>
       <div>
-          <img src="../assets/heima.png" alt="">
+          <img src="../assets/1.png" alt="">
           <span>电商后台管理系统</span>
       </div>
       <el-button type='info' @click='loginout'>退出</el-button>
